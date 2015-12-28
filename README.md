@@ -17,7 +17,7 @@ sudo python setup.py install
 ```
 from sherdog import Sherdog
 sherdog = Sherdog('http://www.sherdog.com/fighter/')
-response_code, json = sherdog.find('Jose-Aldo-1150')
+response_code, json = sherdog.find('Jose-Aldo-11506')
 print(json)
 ```
 
@@ -25,117 +25,315 @@ You'll get a print console like this
 
 ```
 {
-	"weight": "0 lbs",
-	"fighter_id": "Jose-Aldo-1150",
-	"full_name": "Ryan Roath",
-	"nationality": null,
-	"height": "0'0\"",
-	"nickname": null,
-	"association": null,
-	"fighter_code_id": "Ryan-Roath-1150",
+	"weight": "145 lbs",
+	"fighter_id": "Jose-Aldo-11506",
+	"full_name": "Jose Aldo",
+	"nationality": "Brazil",
+	"height": "5'7\"",
+	"nickname": "Scarface",
+	"association": "Nova Uniao",
+	"fighter_code_id": "Jose-Aldo-11506",
 	"amateur_history": [],
-	"weight_class": "N/A",
-	"address_locality": null,
-	"birth_date": "N/A",
+	"weight_class": "Featherweight",
+	"address_locality": "Manaus, Amazonas",
+	"birth_date": "1986-09-09",
 	"fight_results": [{
-		"opponent_name": "Kyle Dennis",
-		"event_url": "/events/WFC-Rumble-at-the-Ramada-5578",
-		"result": "win",
-		"time": "0:00",
-		"event_name": "WFC - Rumble at the Ramada",
+		"opponent_name": "Conor McGregor",
+		"event_url": "/events/UFC-194-Aldo-vs-McGregor-42245",
+		"result": "loss",
+		"time": "0:13",
+		"event_name": "UFC 194 - Aldo vs. McGregor",
 		"event_date": "N/A",
-		"referee": "N/A",
-		"method": "Submission (Guillotine Choke)",
-		"round": "3",
-		"opponent": "/fighter/Kyle-Dennis-22421"
+		"referee": "John McCarthy",
+		"method": "KO (Punch)",
+		"round": "1",
+		"opponent": "/fighter/Conor-McGregor-29688"
 	}, {
-		"opponent_name": "Mike Rainier",
-		"event_url": "/events/RITC-34-Rage-in-the-Cage-34-764",
+		"opponent_name": "Chad Mendes",
+		"event_url": "/events/UFC-179-Aldo-vs-Mendes-2-37749",
+		"result": "win",
+		"time": "5:00",
+		"event_name": "UFC 179 - Aldo vs. Mendes 2",
+		"event_date": "N/A",
+		"referee": "Marc Goddard",
+		"method": "Decision (Unanimous)",
+		"round": "5",
+		"opponent": "/fighter/Chad-Mendes-38393"
+	}, {
+		"opponent_name": "Ricardo Lamas",
+		"event_url": "/events/UFC-169-Barao-vs-Faber-2-32773",
+		"result": "win",
+		"time": "5:00",
+		"event_name": "UFC 169 - Barao vs. Faber 2",
+		"event_date": "N/A",
+		"referee": "Keith Peterson",
+		"method": "Decision (Unanimous)",
+		"round": "5",
+		"opponent": "/fighter/Ricardo-Lamas-32051"
+	}, {
+		"opponent_name": "Chan Sung Jung",
+		"event_url": "/events/UFC-163-Aldo-vs-Korean-Zombie-28015",
+		"result": "win",
+		"time": "2:00",
+		"event_name": "UFC 163 - Aldo vs. Korean Zombie",
+		"event_date": "N/A",
+		"referee": "Herb Dean",
+		"method": "TKO (Punches)",
+		"round": "4",
+		"opponent": "/fighter/Chan-Sung-Jung-36155"
+	}, {
+		"opponent_name": "Frankie Edgar",
+		"event_url": "/events/UFC-156-Aldo-vs-Edgar-26099",
+		"result": "win",
+		"time": "5:00",
+		"event_name": "UFC 156 - Aldo vs. Edgar",
+		"event_date": "N/A",
+		"referee": "Steve Mazzagatti",
+		"method": "Decision (Unanimous)",
+		"round": "5",
+		"opponent": "/fighter/Frankie-Edgar-14204"
+	}, {
+		"opponent_name": "Chad Mendes",
+		"event_url": "/events/UFC-142-Aldo-vs-Mendes-18901",
+		"result": "win",
+		"time": "4:59",
+		"event_name": "UFC 142 - Aldo vs. Mendes",
+		"event_date": "N/A",
+		"referee": "Mario Yamasaki",
+		"method": "KO (Knee)",
+		"round": "1",
+		"opponent": "/fighter/Chad-Mendes-38393"
+	}, {
+		"opponent_name": "Kenny Florian",
+		"event_url": "/events/UFC-136-Edgar-vs-Maynard-3-17391",
+		"result": "win",
+		"time": "5:00",
+		"event_name": "UFC 136 - Edgar vs. Maynard 3",
+		"event_date": "N/A",
+		"referee": "Dan Miragliotta",
+		"method": "Decision (Unanimous)",
+		"round": "5",
+		"opponent": "/fighter/Kenny-Florian-8021"
+	}, {
+		"opponent_name": "Mark Hominick",
+		"event_url": "/events/UFC-129-St-Pierre-vs-Shields-15427",
+		"result": "win",
+		"time": "5:00",
+		"event_name": "UFC 129 - St. Pierre vs. Shields",
+		"event_date": "N/A",
+		"referee": "John McCarthy",
+		"method": "Decision (Unanimous)",
+		"round": "5",
+		"opponent": "/fighter/Mark-Hominick-4728"
+	}, {
+		"opponent_name": "Manny Gamburyan",
+		"event_url": "/events/WEC-51-Aldo-vs-Gamburyan-14014",
+		"result": "win",
+		"time": "1:32",
+		"event_name": "WEC 51 - Aldo vs. Gamburyan",
+		"event_date": "N/A",
+		"referee": "Herb Dean",
+		"method": "KO (Punches)",
+		"round": "2",
+		"opponent": "/fighter/Manny-Gamburyan-5185"
+	}, {
+		"opponent_name": "Urijah Faber",
+		"event_url": "/events/WEC-48-Aldo-vs-Faber-12597",
+		"result": "win",
+		"time": "5:00",
+		"event_name": "WEC 48 - Aldo vs. Faber",
+		"event_date": "N/A",
+		"referee": "Josh Rosenthal",
+		"method": "Decision (Unanimous)",
+		"round": "5",
+		"opponent": "/fighter/Urijah-Faber-8847"
+	}, {
+		"opponent_name": "Mike Thomas Brown",
+		"event_url": "/events/WEC-44-Brown-vs-Aldo-11238",
+		"result": "win",
+		"time": "1:20",
+		"event_name": "WEC 44 - Brown vs. Aldo",
+		"event_date": "N/A",
+		"referee": "Steve Mazzagatti",
+		"method": "TKO (Punches)",
+		"round": "2",
+		"opponent": "/fighter/Mike-Thomas-Brown-3069"
+	}, {
+		"opponent_name": "Cub Swanson",
+		"event_url": "/events/WEC-41-Brown-vs-Faber-2-9864",
+		"result": "win",
+		"time": "0:08",
+		"event_name": "WEC 41 - Brown vs. Faber 2",
+		"event_date": "N/A",
+		"referee": "Steve Mazzagatti",
+		"method": "TKO (Flying Knee and Punches)",
+		"round": "1",
+		"opponent": "/fighter/Cub-Swanson-11002"
+	}, {
+		"opponent_name": "Chris Mickle",
+		"event_url": "/events/WEC-39-Brown-vs-Garcia-9492",
 		"result": "win",
 		"time": "1:39",
-		"event_name": "RITC 34 - Rage in the Cage 34",
+		"event_name": "WEC 39 - Brown vs. Garcia",
 		"event_date": "N/A",
-		"referee": "N/A",
-		"method": "DQ",
-		"round": "2",
-		"opponent": "/fighter/Mike-Rainier-1779"
-	}, {
-		"opponent_name": "Joe Riggs",
-		"event_url": "/events/RITC-30-Soaring-to-New-Heights-528",
-		"result": "loss",
-		"time": "2:32",
-		"event_name": "RITC 30 - Soaring to New Heights",
-		"event_date": "N/A",
-		"referee": "N/A",
-		"method": "Submission (Punches)",
+		"referee": "Rafael Ramos",
+		"method": "TKO (Punches)",
 		"round": "1",
-		"opponent": "/fighter/Joe-Riggs-2765"
+		"opponent": "/fighter/Chris-Mickle-12021"
 	}, {
-		"opponent_name": "Brian Ryan",
-		"event_url": "/events/RITC-29-Rage-in-the-Cage-29-524",
-		"result": "loss",
-		"time": "2:45",
-		"event_name": "RITC 29 - Rage in the Cage 29",
+		"opponent_name": "Rolando Perez",
+		"event_url": "/events/WEC-38-Varner-vs-Cerrone-9329",
+		"result": "win",
+		"time": "4:15",
+		"event_name": "WEC 38 - Varner vs. Cerrone",
+		"event_date": "N/A",
+		"referee": "Jon Schorle",
+		"method": "KO (Knee and Punches)",
+		"round": "1",
+		"opponent": "/fighter/Rolando-Perez-13525"
+	}, {
+		"opponent_name": "Jonathan Brookins",
+		"event_url": "/events/WEC-36-Faber-vs-Brown-7810",
+		"result": "win",
+		"time": "0:45",
+		"event_name": "WEC 36 - Faber vs. Brown",
 		"event_date": "N/A",
 		"referee": "N/A",
-		"method": "TKO",
+		"method": "TKO (Punches)",
 		"round": "3",
-		"opponent": "/fighter/Brian-Ryan-1120"
+		"opponent": "/fighter/Jonathan-Brookins-17316"
 	}, {
-		"opponent_name": "Bill Rohlf",
-		"event_url": "/events/RITC-28-Rage-in-the-Cage-28-409",
+		"opponent_name": "Alexandre Franca Nogueira",
+		"event_url": "/events/WEC-34-Sacramento-6995",
 		"result": "win",
-		"time": "1:16",
-		"event_name": "RITC 28 - Rage in the Cage 28",
+		"time": "3:22",
+		"event_name": "WEC 34 - Sacramento",
 		"event_date": "N/A",
 		"referee": "N/A",
-		"method": "Submission (Keylock)",
-		"round": "1",
-		"opponent": "/fighter/Bill-Rohlf-1801"
-	}, {
-		"opponent_name": "Michael Simpson",
-		"event_url": "/events/RITC-27-Rage-in-the-Cage-27-356",
-		"result": "win",
-		"time": "0:50",
-		"event_name": "RITC 27 - Rage in the Cage 27",
-		"event_date": "N/A",
-		"referee": "N/A",
-		"method": "Submission (Choke)",
-		"round": "1",
-		"opponent": "/fighter/Michael-Simpson-1820"
-	}, {
-		"opponent_name": "Elvis Hinkle",
-		"event_url": "/events/RITC-25-Rage-in-the-Cage-25-348",
-		"result": "win",
-		"time": "3:00",
-		"event_name": "RITC 25 - Rage in the Cage 25",
-		"event_date": "N/A",
-		"referee": "N/A",
-		"method": "TKO",
-		"round": "1",
-		"opponent": "/fighter/Elvis-Hinkle-1780"
-	}, {
-		"opponent_name": "Justin Lyon",
-		"event_url": "/events/RITC-24-Rage-in-the-Cage-24-208",
-		"result": "loss",
-		"time": "0:29",
-		"event_name": "RITC 24 - Rage in the Cage 24",
-		"event_date": "N/A",
-		"referee": "N/A",
-		"method": "Submission (Punches)",
+		"method": "TKO (Punches)",
 		"round": "2",
-		"opponent": "/fighter/Justin-Lyon-1108"
+		"opponent": "/fighter/Alexandre-Franca-Nogueira-431"
 	}, {
-		"opponent_name": "Brian Ryan",
-		"event_url": "/events/RITC-23-Rage-in-the-Cage-23-207",
+		"opponent_name": "Shoji Maruyama",
+		"event_url": "/events/Pancrase-2007-NeoBlood-Tournament-Finals-5151",
 		"result": "win",
-		"time": "1:44",
-		"event_name": "RITC 23 - Rage in the Cage 23",
+		"time": "5:00",
+		"event_name": "Pancrase - 2007 Neo-Blood Tournament Finals",
+		"event_date": "N/A",
+		"referee": "Soichi Hiroto",
+		"method": "Decision (Unanimous)",
+		"round": "3",
+		"opponent": "/fighter/Shoji-Maruyama-18886"
+	}, {
+		"opponent_name": "Fabio Mello",
+		"event_url": "/events/TFC-3-Top-Fighting-Championships-3-5178",
+		"result": "win",
+		"time": "5:00",
+		"event_name": "TFC 3 - Top Fighting Championships 3",
 		"event_date": "N/A",
 		"referee": "N/A",
-		"method": "Submission (Strikes)",
+		"method": "Decision (Unanimous)",
+		"round": "3",
+		"opponent": "/fighter/Fabio-Mello-2195"
+	}, {
+		"opponent_name": "Thiago Meller",
+		"event_url": "/events/GFC-1-Gold-Fighters-Championship-3892",
+		"result": "win",
+		"time": "5:00",
+		"event_name": "GFC 1 - Gold Fighters Championship",
+		"event_date": "N/A",
+		"referee": "N/A",
+		"method": "Decision (Majority)",
+		"round": "3",
+		"opponent": "/fighter/Thiago-Meller-8186"
+	}, {
+		"opponent_name": "Luciano Azevedo",
+		"event_url": "/events/JF-5-Jungle-Fight-5-3424",
+		"result": "loss",
+		"time": "3:37",
+		"event_name": "JF 5 - Jungle Fight 5",
+		"event_date": "N/A",
+		"referee": "N/A",
+		"method": "Submission (Rear-Naked Choke)",
+		"round": "2",
+		"opponent": "/fighter/Luciano-Azevedo-7919"
+	}, {
+		"opponent_name": "Micky Young",
+		"event_url": "/events/FX3-Battle-of-Britain-3316",
+		"result": "win",
+		"time": "1:05",
+		"event_name": "FX3 - Battle of Britain",
+		"event_date": "N/A",
+		"referee": "N/A",
+		"method": "TKO (Punches)",
 		"round": "1",
-		"opponent": "/fighter/Brian-Ryan-1120"
+		"opponent": "/fighter/Micky-Young-12546"
+	}, {
+		"opponent_name": "Phil Harris",
+		"event_url": "/events/UK1-Fight-Night-3282",
+		"result": "win",
+		"time": "0:00",
+		"event_name": "UK-1 - Fight Night",
+		"event_date": "N/A",
+		"referee": "N/A",
+		"method": "TKO (Doctor Stoppage)",
+		"round": "1",
+		"opponent": "/fighter/Phil-Harris-8753"
+	}, {
+		"opponent_name": "Anderson Silverio",
+		"event_url": "/events/Meca-12-Meca-World-Vale-Tudo-12-3158",
+		"result": "win",
+		"time": "8:33",
+		"event_name": "Meca 12 - Meca World Vale Tudo 12",
+		"event_date": "N/A",
+		"referee": "N/A",
+		"method": "Submission (Soccer Kicks)",
+		"round": "1",
+		"opponent": "/fighter/Anderson-Silverio-13383"
+	}, {
+		"opponent_name": "Aritano Silva Barbosa",
+		"event_url": "/events/RMMAC-Rio-MMA-Challenge-1-3056",
+		"result": "win",
+		"time": "0:20",
+		"event_name": "RMMAC - Rio MMA Challenge 1",
+		"event_date": "N/A",
+		"referee": "N/A",
+		"method": "KO (Soccer Kicks)",
+		"round": "1",
+		"opponent": "/fighter/Aritano-Silva-Barbosa-2196"
+	}, {
+		"opponent_name": "Luiz de Paula",
+		"event_url": "/events/Shooto-Brazil-7-2934",
+		"result": "win",
+		"time": "1:54",
+		"event_name": "Shooto - Brazil 7",
+		"event_date": "N/A",
+		"referee": "N/A",
+		"method": "Submission (Arm-Triangle Choke)",
+		"round": "1",
+		"opponent": "/fighter/Luiz-de-Paula-12515"
+	}, {
+		"opponent_name": "Hudson Rocha",
+		"event_url": "/events/Shooto-Brazil-Never-Shake-2636",
+		"result": "win",
+		"time": "5:00",
+		"event_name": "Shooto Brazil - Never Shake",
+		"event_date": "N/A",
+		"referee": "N/A",
+		"method": "TKO (Doctor Stoppage)",
+		"round": "1",
+		"opponent": "/fighter/Hudson-Rocha-3922"
+	}, {
+		"opponent_name": "Mario Bigola",
+		"event_url": "/events/EFC-1-Eco-Fight-Championship-1-8243",
+		"result": "win",
+		"time": "0:18",
+		"event_name": "EFC 1 - Eco Fight Championship 1",
+		"event_date": "N/A",
+		"referee": "N/A",
+		"method": "KO (Head Kick)",
+		"round": "1",
+		"opponent": "/fighter/Mario-Bigola-58130"
 	}]
 }
 ```
