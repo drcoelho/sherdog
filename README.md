@@ -6,9 +6,7 @@ I created this api for help me in my project about sports social networks rankin
 
 ```
 git clone https://github.com/drcoelho/sherdog
-```
-
-```
+cd sherdog
 sudo python setup.py install
 ```
 
