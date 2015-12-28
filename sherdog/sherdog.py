@@ -29,7 +29,7 @@ ROUND = 4
 TIME = 5
 
 # logging.basicConfig(filename='sherdog.log', level=logging.DEBUG)
-logging.basicConfig(format='%(asctime)s - %(message)s', datefmt='%m/%d/%Y %I:%M:%S', level=logging.DEBUG)
+# logging.basicConfig(format='%(asctime)s - %(message)s', datefmt='%m/%d/%Y %I:%M:%S', level=logging.DEBUG)
 
 
 class Sherdog:
@@ -69,7 +69,7 @@ class Sherdog:
         code_id = self.get_fighter_id_from_url(response.url)
 
         soup = BeautifulSoup(html, 'lxml')
-        #soup = BeautifulSoup(html, 'html.parser')
+        # soup = BeautifulSoup(html, 'html.parser')
 
         bio = soup.find("div", {"class": "bio_fighter"})
 
