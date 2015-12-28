@@ -9,6 +9,7 @@ Fighter id can be complete fighter id or just the code id. Example: Jose-Aldo-11
 ### Requirements 
 
 * BeautifulSoup - http://www.crummy.com/software/BeautifulSoup/
+* Python lxml - http://lxml.de/
 
 ### Cloning and Install
 
