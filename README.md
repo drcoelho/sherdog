@@ -2,7 +2,7 @@
 
 I created this api for help me in my project about sports social networks ranking. I needed to build a graph with all mma fighters, so I wrote this code to help in that job.
 
-It is very simple, class Sherdog url root and fighter id, make a request and parse html. The return is a json representation of a fighter.
+It is very simple, class Sherdog receive the url root and fighter id, make a request and parse html. The return is a json representation of a fighter.
 
 Fighter id can be complete fighter id or just the code id. Example: Jose-Aldo-11506 or 11506 workks as same for sherdog website.
 
