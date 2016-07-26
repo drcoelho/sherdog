@@ -68,8 +68,8 @@ class Sherdog:
         html = response.read()
         code_id = self.get_fighter_id_from_url(response.url)
 
-        soup = BeautifulSoup(html, 'lxml')
-        # soup = BeautifulSoup(html, 'html.parser')
+        # soup = BeautifulSoup(html, 'lxml')
+        soup = BeautifulSoup(html, 'html.parser')
 
         bio = soup.find("div", {"class": "bio_fighter"})
 
