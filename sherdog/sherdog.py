@@ -127,7 +127,6 @@ class Sherdog:
         amateur_results = []
 
         fight_history = self._find_table_history(soup, 'History')    # Fight History
-        print fight_history
         amateur_history = self._find_table_history(soup, 'Amateur')  # Amateur Fights
 
         if fight_history:
