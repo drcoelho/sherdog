@@ -2,3 +2,6 @@ build
 dist
 sherdog.egg-info
 *pyc
+.idea/
+files.txt
+sherdog/sherdog.log
