@@ -68,8 +68,8 @@ class Sherdog:
         html = response.read()
         code_id = self.get_fighter_id_from_url(response.url)
 
-        soup = BeautifulSoup(html, 'lxml')
-        # soup = BeautifulSoup(html, 'html.parser')
+        # soup = BeautifulSoup(html, 'lxml')
+        soup = BeautifulSoup(html, 'html.parser')
 
         bio = soup.find("div", {"class": "bio_fighter"})
 
@@ -200,7 +200,7 @@ class Sherdog:
                 td_list = tr.findAll('td')
 
                 if len(td_list) != RESULT_MAX_COLUMNS:
-                    log('Invalid fight info table. Columns: ' + str(len(td_list)))
+                    print('Invalid fight info table. Columns: ' + str(len(td_list)))
                     break
 
                 result = td_list[RESULT].string
@@ -213,7 +213,7 @@ class Sherdog:
                 event_name = event.string
                 event_url = event['href']
 
-                event_date_span = event.find('span', {'class': 'sub_line'})
+                event_date_span = td_list[EVENT].find('span', {'class': 'sub_line'})
                 if event_date_span:
                     event_date = event_date_span.string.replace(' ', '')
                 else:
@@ -263,7 +263,7 @@ def main():
     logging.debug(sherdog.find('1', json_format=False))
     logging.debug("-----------------------")
     logging.debug(sherdog.find('165671'))
-    # print sherdog.find('165671')
+    print sherdog.find('165671')
     # print sherdog.find('aaa')
 
 
