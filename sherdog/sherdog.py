@@ -2,7 +2,11 @@
 # -*- coding: UTF-8 -*-
 
 
-import urllib2
+try:
+    import urllib.request as urllib2
+except ImportError:
+    import urllib2
+
 import json
 import traceback
 import threading
@@ -263,7 +267,7 @@ def main():
     logging.debug(sherdog.find('1', json_format=False))
     logging.debug("-----------------------")
     logging.debug(sherdog.find('165671'))
-    print sherdog.find('165671')
+    print(sherdog.find('165671'))
     # print sherdog.find('aaa')
 
 
