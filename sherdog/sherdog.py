@@ -67,8 +67,6 @@ class Sherdog:
 
     def _parse_bio_fighter(self, response, fighter_id):
 
-        start = time()
-
         html = response.read()
         code_id = self.get_fighter_id_from_url(response.url)
 
@@ -77,10 +75,10 @@ class Sherdog:
 
         bio = soup.find("div", {"class": "bio_fighter"})
 
-        name = bio.find("h1", {"itemprop": "name"})
-
         fn = soup.find("span", {"class": "fn"})
-        nickname_span = name.find("span", {"class": "nickname"})
+        name = fn.string
+        nickname_span = soup.find("span", {"class": "nickname"})
+
         nickname = nickname_span.find("em") if nickname_span else None
 
         nationality = soup.find("strong", {"itemprop": "nationality"})
@@ -266,8 +264,8 @@ def main():
     sherdog = Sherdog("http://www.sherdog.com/fighter/")
     logging.debug(sherdog.find('1', json_format=False))
     logging.debug("-----------------------")
-    logging.debug(sherdog.find('165671'))
-    print(sherdog.find('165671'))
+    logging.debug(sherdog.find('11506'))
+    print(sherdog.find('11506'))
     # print sherdog.find('aaa')
 
 

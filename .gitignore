@@ -6,3 +6,4 @@ sherdog.egg-info
 files.txt
 sherdog/sherdog.log
 .idea
+venv
